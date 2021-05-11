@@ -1,5 +1,4 @@
 /*
-
  El efecto de la función map consiste en 
  devolver una variable de tipo flotante,
  esta variable es el resultado de 
@@ -25,13 +24,21 @@
    
    Referencia:
    https://processing.org/reference/map_.html
+   
 */
-float miVariable;
+float miVariable = 0;
 void setup(){
   size(250,500);
-}
+}  
 void draw(){
   miVariable = map(mouseX, 0 , width, 0, height);
-  println(miVariable);
-  ellipse(50,miVariable,50,50);
+  background(0);
+  fill(255);
+  text("Width: " + width, width/2, 0+height/12);
+  text("Height: " + height, width/2, 0+height/12*2);
+  text("Mi mouseX: "+ mouseX, width/2, 0+height/12*3);
+  text("Mi resultado: " + miVariable, width/2, 0+height/12*4);
+  ellipse(50,miVariable,100,100);
+  fill(0);
+  text(miVariable,20,miVariable);
 }
