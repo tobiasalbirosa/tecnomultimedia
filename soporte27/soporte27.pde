@@ -5,10 +5,6 @@ int posY;
 int pantalla = 0;
 color colorDeFondo = (0);
 float mapeado = 255;
-/*
-AND : && 
- OR : ||
- */
 void setup() {
   size(400, 400);
   posY  = height;
@@ -16,15 +12,15 @@ void setup() {
   textAlign(CENTER, TOP);
   textFont(miTipografia);
 }
-void draw() {
+void draw() { 
   background(colorDeFondo);
   mapeado = map(posY, 400, 0, 0, 255);
   if (posY >= 0 && pantalla < 6) {
-    posY--;
+    posY-=3;
   } else {
     posY = height;
-  }
-  if (posY == 0) {
+  } 
+  if (posY <= 0) {
     pantalla++;
   }
   if (pantalla == 0) {
@@ -48,6 +44,8 @@ void draw() {
     fill(255, mapeado);
     colorDeFondo = color(0);
     miTexto = "Fin.";
+  } else if(pantalla == 6){
+    pantalla = 0;
   }
   text(miTexto, width/2, posY);
   println("PosY: ", posY);
