@@ -1,22 +1,11 @@
-PFont miFuente;
-PFont miOtraFuente;
+PFont font;
 void setup(){
-  size(800,500);
-  miFuente = loadFont("Impact-48.vlw");
-  miOtraFuente = loadFont("Rockwell-Italic-48.vlw");
+  background(255);
+  font = createFont("Academy.ttf",48);
+  textFont(font, 32);
+  textAlign(CENTER,BASELINE);
 }
-
 void draw(){
-    background(0);
-    fill(random(255),random(255),random(255));
-    
-    textFont(miFuente);
-    text("Hola",50,50);
-   
-    
-    fill(random(255),random(255),random(255));
-
-    textFont(miOtraFuente);
-    text("Cualquier otro texto",50,150);
-
+   background(0);
+  text("hola",mouseX,mouseY);
 }
