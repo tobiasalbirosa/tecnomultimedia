@@ -1,21 +1,25 @@
 float tam;
 float posX;
 float posY;
-color colorVariable = color(255);
-color color1 = color(255, 0, 0);
-int framesPorSegundo = 60;
-int dificultad = 60;
+color colorVariable;
+int framesPorSegundo;
+int dificultad;
 int cantidadDeCuadrantes = 4;
-int estado = 0;
+int estado;
 String porJugar = "Prueba tus reflejos y sube de nivel";
-int nivel = 0;
+int nivel;
 void setup() {
   size(320, 320);
-  frameRate(framesPorSegundo);
+  dificultad = 60;
+  estado = 0;
+  nivel = 0;
+  framesPorSegundo = 60;
   background(0);
   textAlign(CENTER, BASELINE);
   background(255);
+  frameRate(framesPorSegundo);
   tam = width/cantidadDeCuadrantes;
+  colorVariable = color(255);
 }
 void draw() {
   if (estado == 0) {
@@ -88,7 +92,7 @@ void mouseMoved() {
   }
 }
 void mouseClicked() {
-  println("click:", estado);
+  println("# de estado cuando hago click: #", estado);
   colorVariable = color(200);
   if (
     mouseX > width/2-tam/2 
@@ -112,7 +116,7 @@ void mouseClicked() {
 void mousePressed() {
   if (mouseX > posX && mouseX < posX + tam && mouseY > posY && mouseY < posY + tam && estado == 1) {
     nivel++;
-    println(dificultad);
+    println("Dificultad (menos es más): ", dificultad);
     if (nivel < 5) {
       dificultad = dificultad - 8;
       estado = 2;
