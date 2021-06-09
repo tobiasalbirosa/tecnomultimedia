@@ -89,7 +89,7 @@ void mouseMoved() {
   if (mouseX > width/2-tamB/2 
     && mouseX < width/2-tamB/2 + tamB 
     && mouseY > height/2-tamB/2 
-    && mouseY < height/2-tam/2 + tamB 
+    && mouseY < height/2 + tamB/2 
     && estado == 0) {
     colorVariable = color(255);
   }
