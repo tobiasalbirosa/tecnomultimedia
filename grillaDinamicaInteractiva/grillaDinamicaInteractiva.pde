@@ -62,7 +62,7 @@ void keyPressed() {
   } else if (key=='-') {
     tamYCant=tamYCant-1;
   } else if (key==' ') {
-    tamYCant=width/20;
+    tamYCant=20;
   }
   if (tamYCant < 1) {
     tamYCant = 1;
