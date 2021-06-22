@@ -27,6 +27,9 @@ void draw() {
       } else if ((i+j) % 2 == 1) {
         fill(0);
       }
+       if (i==j) {
+        fill(120,200,200);
+      }
       if (mouseX > posX 
         && mouseX < posX + anchoFiguras
         && mouseY > posY
@@ -45,8 +48,8 @@ void draw() {
       } else {
         fill(255);
       }
-      ellipse(i*anchoFiguras, j*altoFiguras, anchoFiguras/30, altoFiguras/30);
-      text(i*anchoFiguras +"/"+ j*altoFiguras, i*anchoFiguras, j*altoFiguras);
+      ellipse(i*anchoFiguras, j*altoFiguras, anchoFiguras/20, altoFiguras/20);
+      text(i +"/"+ j, i*anchoFiguras, j*altoFiguras);
     }
   }
 }
