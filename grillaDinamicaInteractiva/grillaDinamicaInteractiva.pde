@@ -30,6 +30,9 @@ void draw() {
        if (i==j) {
         fill(120,200,200);
       }
+      if (i+j==tamYCant-1 ) {
+        fill(190,240,240);
+      }
       if (mouseX > posX 
         && mouseX < posX + anchoFiguras
         && mouseY > posY
