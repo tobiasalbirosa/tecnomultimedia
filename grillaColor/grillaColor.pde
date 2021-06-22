@@ -9,10 +9,7 @@ void setup() {
   textAlign(LEFT);
   textSize(8);
   colorMode(HSB);
-  tamYCant = 1;
-  surface.setResizable(true);
-  println("Grilla dinámica: ");
-  println("Presionar las taclas -, + o espacio");
+  tamYCant = 30;
   background(255);
 }
 void draw() {
@@ -20,7 +17,6 @@ void draw() {
   hT = round(height/tamYCant);
   fill(255);
   noStroke();
-  tamYCant = 30;
   rect(0, 0, width, height);
   for (int j = 0; j < tamYCant; j++) {
     for (int i = 0; i < tamYCant; i++) {
@@ -30,22 +26,4 @@ void draw() {
       ellipse(I, J, wT, hT);
     }
   }
-}
-void mousePressed() {
-  surface.setSize(round(height), round(height));
-}
-void keyPressed() {
-  if (key=='+') {
-    tamYCant=tamYCant+1;
-  } else if (key=='-') {
-    tamYCant=tamYCant-1;
-  } else if (key==' ') {
-    frameCount=width/2;
-  }
-  if (tamYCant < 1) {
-    tamYCant = 1;
-  } else  if (tamYCant > width) {
-    tamYCant = width;
-  }
-  println("Variable de tamaño y cantidad: ", tamYCant);
 }
