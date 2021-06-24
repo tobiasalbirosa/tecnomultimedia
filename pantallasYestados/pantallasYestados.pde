@@ -1,34 +1,36 @@
 
 String miTexto = "Mi texto";
-PFont miTipografia;
+PFont miTipografia,miTipografia2;
 int posY;
 int pantalla = 0;
 color colorDeFondo = (0);
 float mapeado = 255;
-/*
-AND : && 
- OR : ||
- */
 void setup() {
   size(400, 400);
   posY  = height;
-  miTipografia = loadFont("Futura-Medium-48.vlw");
+  miTipografia = loadFont("Serif-48.vlw");
+  miTipografia2 = createFont("Roboto-Medium",48);
   textAlign(CENTER, TOP);
-  textFont(miTipografia);
 }
 void draw() { 
   background(colorDeFondo);
   mapeado = map(posY, 400, 0, 0, 255);
+  if (posY <= 0) {
+    pantalla++;
+  }
+  if(pantalla % 2 == 0){
+    textFont(miTipografia);
+  }else{
+        textFont(miTipografia2);
+
+  }
   if (posY >= 0 && pantalla < 6) {
     posY-=3;
   } else {
     posY = height;
   } 
-  
-  if (posY <= 0) {
-    pantalla++;
-  }
-  
+
+
   if (pantalla == 0) {
     colorDeFondo = color(255);
     fill(0, 0, 0, mapeado);
@@ -51,7 +53,7 @@ void draw() {
     colorDeFondo = color(0);
     miTexto = "Fin.";
   }
-  if(pantalla == 6){
+  if (pantalla == 6) {
     pantalla = 0;
   }
   text(miTexto, width/2, posY);
