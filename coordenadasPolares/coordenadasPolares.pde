@@ -12,6 +12,7 @@ void setup() {
   rectMode(CENTER);
 }
 void draw() {
+  noStroke();
   background(80);
 
   tam = width/4;
