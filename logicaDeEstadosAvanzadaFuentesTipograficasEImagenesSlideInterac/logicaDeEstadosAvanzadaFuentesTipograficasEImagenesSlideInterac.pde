@@ -80,12 +80,12 @@ void draw() {
     image(fondo2, width/2, posY-height, width, height);
     image(fondo3, width/2, posY, width, height);
     image(fondo4, width/2, posY+height, width, height);    
-    text("Pantalla 2", width/2, posY);
+    text("Pantalla 3", width/2, posY);
   } else if (estado == "pantalla4" && estadoID == 4) {
     image(fondo3, width/2, posY-height, width, height);
     image(fondo4, width/2, posY, width, height);
     image(fondo0, width/2, posY+height, width, height);    
-    text("Pantalla 3 Fin", width/2, posY);
+    text("Pantalla 4 Fin", width/2, posY);
   }
 
   posY = tiempo;
