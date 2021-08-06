@@ -8,11 +8,11 @@ void draw() {
   line(width/2, 0, width/2, height);
   line(0, height/2, width, height/2);
   stroke(255);
-  for (int i = 0; i < width; i+=50) {
-    for (int j = 0; j < height; j+=50) {
+  for (int x = 0; x < width; x+=diam) {
+    for (int y = 0; y < height; y+=diam) {
       pushMatrix();
       //TRASLADAMOS NUESTRO PUNTO X, Y
-      translate(i, j);
+      translate(x, y );
       /*ROTAMOS SIN AFECTAR A NADA DE LO QUE ESTE AFUERA
        DE NUESTR0 PUSHMATRIX
        */
