@@ -16,6 +16,7 @@ void setup () {
       }
     }
   }
+  textAlign(LEFT,CENTER);
 }
 void draw () {
   background(0);  
@@ -26,7 +27,7 @@ void draw () {
       for (int k = 0; k < cantidadDeEspacios; k++) {
         float posZ = map(k, 0, cantidadDeEspacios, 150, 50);
         textSize(posZ/10);
-        text("3D : "+i+"/"+j+"/"+k+"", mouseX+(i*150+posZ), mouseY+(j*100+posZ));
+        text("3D : "+i+"/"+j+"/"+k+"", mouseX+(i*150-posZ), mouseY+(j*100-posZ));
       }
     }
   }
