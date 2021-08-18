@@ -1,11 +1,14 @@
 /*
+Traducción al castellano y simplificación del ejemplo básico de processing 
+https://processing.org/examples/array.html
+
  * Arreglo
  
  Un arreglo es una lista de información (data)
  
  Cada pieza de información en el arreglo 
  está identificada por un número de índice
- representando esta posición en el arraglo.
+ representando esta posición en el arreglo.
  
  Los arreglos son basados en cero, 
  lo que significa que 
@@ -15,7 +18,7 @@
  
  En este ejemplo, un arreglo llamado "coseno"
  está creado y llenado con todos los valores del coseno
- relativo al tamaño de la pantalla.
+ relativo al tamaño de la pantalla mapeado de 0 a PI.
  
  */
 
@@ -30,6 +33,7 @@ void setup() {
   coseno = new float[width];
   for (int i = 0; i < width; i++) {
     valores = map(i, 0, width, 0, PI);
+ //Tomamos aquí el absoluto ya que no necesitamos los valores negativos
     coseno[i] = abs(cos(valores));
     println(coseno[i]);
   }
