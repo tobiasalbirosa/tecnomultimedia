@@ -1,5 +1,5 @@
 /*
-Traducción al castellano y simplificación del ejemplo básico de processing 
+Traducción al castellano y simplificación del ejemplo básico de Processing 
 https://processing.org/examples/array.html
 
  * Arreglo
@@ -33,7 +33,7 @@ void setup() {
   coseno = new float[width];
   for (int i = 0; i < width; i++) {
     valores = map(i, 0, width, 0, PI);
- //Tomamos aquí el absoluto ya que no necesitamos los valores negativos
+ // Tomamos aquí el absoluto ya que no necesitamos los valores negativos
     coseno[i] = abs(cos(valores));
     println(coseno[i]);
   }
