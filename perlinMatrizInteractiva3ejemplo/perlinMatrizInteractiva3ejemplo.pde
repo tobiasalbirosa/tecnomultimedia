@@ -31,7 +31,7 @@ void draw() {
       println("pfs:", frameRate);
       rect(x*valorDelRuido,y*valorDelRuido, 10, 10);
       //noStroke();
-      //circle(0, 0, 25);
+      circle(0, 0, 25);
       popMatrix();
     }
     //fill(255, 50);
