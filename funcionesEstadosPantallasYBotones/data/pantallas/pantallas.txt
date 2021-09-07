@@ -1,0 +1,6 @@
+"Esta es la pantalla de inicio"
+"Segunda pantalla"
+"Tercera pantalla A"
+"Tercera pantalla B"
+"Cuarta pantalla"
+"Quinta pantalla"

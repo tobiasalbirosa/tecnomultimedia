@@ -1,0 +1,6 @@
+"Esta es la pantalla de inicio"
+"Continuaste hasta la pantalla 2"
+"Este es el lado A de la tercer pantalla"
+"Este es el lado B de la pantalla 3"
+"Cuarta pantalla"
+"Pantalla final, reset."
