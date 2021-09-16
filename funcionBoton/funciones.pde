@@ -1,12 +1,21 @@
-void miBotonRectangular(float x, float y, float tamX, float tamY, int ID) {
-  if (mouseX > x && mouseX < x + tamX && mouseY > y && mouseY < y + tamY ) {
-    fill(127);
+void miBotonRectangular(float x, float y, float ancho, float alto, int ID) {
+  if (mouseX > x && mouseX < x+ancho &&
+    mouseY > y && mouseY < y + alto) {
     if (mousePressed) {
-      fill(0);
-      println("Click en ID: ", ID);
+      if (ID == 0) {
+        background(255, 0, 0);
+      } else if (ID == 1) {
+        background(0, 255, 0);
+      } else if (ID == 2) {
+        background(0, 0, 0);
+      }
+      fill(255);
+      println(ID);
+    } else {
+      fill(180);
     }
   } else {
-    fill(255);
-  }
-  rect(x, y, tamX, tamY);
+    fill(120);
+  }  
+  rect(x, y, ancho, alto);
 }
