@@ -1,0 +1,5 @@
+"Incio"
+"Este es el titulo"
+"Jugando"
+"Ganaste"
+"Perdiste"
